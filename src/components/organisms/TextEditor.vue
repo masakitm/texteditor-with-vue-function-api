@@ -1,15 +1,15 @@
 <template>
   <div>
-    <Header :handleSaveClick="saveValue" :text="inputText" />
+    <TextEditHeader :handleSaveClick="saveValue" :text="inputText" />
     <div class="container">
-      <TextBox :handleInput="updateText" :value="inputText" />
       <TextViewer :textList="textList" />
+      <TextBox :handleInput="updateText" :value="inputText" />
     </div>
   </div>
 </template>
 
 <script>
-import Header from './Header'
+import TextEditHeader from '../molecules/TextEditHeader'
 import TextBox from "../atoms/TextBox";
 import TextViewer from "../atoms/TextViewer";
 
@@ -24,7 +24,7 @@ export default {
     } 
   },
   components: {
-    Header,
+    TextEditHeader,
     TextBox,
     TextViewer
   }
